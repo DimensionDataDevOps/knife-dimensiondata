@@ -19,7 +19,7 @@ class Chef::Knife::DimensiondataTemplateList < Chef::Knife::BaseDimensiondataCom
 
   def run
     caas = get_dimensiondata_connection
-    if (config[:dc].nil?)
+    if (config[:dimensiondata_dc].nil?)
       show_usage
       fatal_exit("You must specify datacenter id for this knife")
     end
